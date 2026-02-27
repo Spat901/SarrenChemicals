@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12">
           {/* Brand */}
           <div>
-            <span className="text-[20px] font-bold text-white">Sarren Chemicals</span>
+            <img src="/images/logo.png" alt="Sarren Chemicals" className="h-[44px] w-auto block brightness-0 invert" />
             <p className="text-white/70 text-[15px] mt-4 max-w-[280px]">
               Buying and selling surplus, aged, and off-spec chemicals since 1997. Confidential. Reliable. Experienced.
             </p>

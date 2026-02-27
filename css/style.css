@@ -149,13 +149,7 @@ section {
   justify-content: space-between;
 }
 
-.nav-logo img { height: 40px; width: auto; display: block; }
-.nav-logo span {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--navy);
-  letter-spacing: -0.02em;
-}
+.nav-logo img { height: 44px; width: auto; display: block; }
 
 .nav-links {
   display: flex;

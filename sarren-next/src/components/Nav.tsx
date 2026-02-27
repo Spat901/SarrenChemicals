@@ -20,8 +20,8 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-[100] bg-white border-b border-border">
       <div className="max-w-content mx-auto px-8 h-[72px] flex items-center justify-between">
-        <Link href="/" className="text-[20px] font-bold text-navy tracking-tight hover:no-underline">
-          Sarren Chemicals
+        <Link href="/" className="hover:no-underline">
+          <img src="/images/logo.png" alt="Sarren Chemicals" className="h-[44px] w-auto block" />
         </Link>
 
         {/* Mobile toggle */}

@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sarren Chemicals — Browse available inventory by category including resins, solvents, pigments, and additives. Inquiry-only pricing. Submit an RFQ for quotes.">
+  <meta name="description"
+    content="Sarren Chemicals — Browse available inventory by category including resins, solvents, pigments, and additives. Inquiry-only pricing. Submit an RFQ for quotes.">
   <title>Products | Sarren Chemicals</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .category-nav { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:56px;border-bottom:1px solid var(--border);padding-bottom:0; }
-    .category-nav a { display:inline-block;padding:12px 20px;font-size:14px;font-weight:500;color:var(--steel);border-bottom:2px solid transparent;margin-bottom:-1px;text-decoration:none; }
-    .category-nav a:hover,.category-nav a.active { color:var(--navy);border-bottom-color:var(--navy); }
-    .category-section { margin-bottom:72px; }
-    .category-section h2 { margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border); }
-    .product-card { display:flex;flex-direction:column; }
-    .product-card h3 { font-size:18px;margin-bottom:8px; }
-    .product-card p { font-size:15px;color:var(--steel);flex:1; }
-    .product-card .btn { margin-top:20px;align-self:flex-start;height:40px;font-size:14px; }
+    .category-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0;
+    }
+
+    .category-nav a {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--steel);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      text-decoration: none;
+    }
+
+    .category-nav a:hover,
+    .category-nav a.active {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    .category-section {
+      margin-bottom: 72px;
+    }
+
+    .category-section h2 {
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .product-card p {
+      font-size: 15px;
+      color: var(--steel);
+      flex: 1;
+    }
+
+    .product-card .btn {
+      margin-top: 20px;
+      align-self: flex-start;
+      height: 40px;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
   <nav class="site-nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="index.html"><span>Sarren Chemicals</span></a>
+      <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="Sarren Chemicals" /></a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -69,7 +121,8 @@
             <div class="card product-card">
               <p class="label">Resin</p>
               <h3>Alkyd Resin</h3>
-              <p>Short, medium, and long oil alkyds for architectural and industrial coatings. Available in drums and totes.</p>
+              <p>Short, medium, and long oil alkyds for architectural and industrial coatings. Available in drums and
+                totes.</p>
               <a href="#rfq" class="btn btn-outline">Request a Quote</a>
             </div>
 
@@ -225,17 +278,25 @@
         </div>
         <form data-form="rfq" action="mailto:info@sarrenchemicals.com" method="POST" enctype="text/plain">
           <div class="grid-2">
-            <div class="form-group"><label for="rfq-name">Full Name</label><input type="text" id="rfq-name" name="name" required placeholder="Jane Smith"></div>
-            <div class="form-group"><label for="rfq-company">Company</label><input type="text" id="rfq-company" name="company" required placeholder="Acme Coatings Co."></div>
+            <div class="form-group"><label for="rfq-name">Full Name</label><input type="text" id="rfq-name" name="name"
+                required placeholder="Jane Smith"></div>
+            <div class="form-group"><label for="rfq-company">Company</label><input type="text" id="rfq-company"
+                name="company" required placeholder="Acme Coatings Co."></div>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="rfq-email">Email</label><input type="email" id="rfq-email" name="email" required placeholder="jane@company.com"></div>
-            <div class="form-group"><label for="rfq-phone">Phone</label><input type="tel" id="rfq-phone" name="phone" placeholder="(555) 000-0000"></div>
+            <div class="form-group"><label for="rfq-email">Email</label><input type="email" id="rfq-email" name="email"
+                required placeholder="jane@company.com"></div>
+            <div class="form-group"><label for="rfq-phone">Phone</label><input type="tel" id="rfq-phone" name="phone"
+                placeholder="(555) 000-0000"></div>
           </div>
-          <div class="form-group"><label for="rfq-product">Product(s) of Interest</label><input type="text" id="rfq-product" name="product" required placeholder="e.g. Alkyd Resin, TiO&#8322;"></div>
-          <div class="form-group"><label for="rfq-qty">Estimated Quantity &amp; Packaging</label><input type="text" id="rfq-qty" name="quantity" placeholder="e.g. 5 drums, 1 tote, bulk"></div>
-          <div class="form-group"><label for="rfq-notes">Additional Notes</label><textarea id="rfq-notes" name="notes" placeholder="Spec requirements, timeline, application details..."></textarea></div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Request for Quote</button>
+          <div class="form-group"><label for="rfq-product">Product(s) of Interest</label><input type="text"
+              id="rfq-product" name="product" required placeholder="e.g. Alkyd Resin, TiO&#8322;"></div>
+          <div class="form-group"><label for="rfq-qty">Estimated Quantity &amp; Packaging</label><input type="text"
+              id="rfq-qty" name="quantity" placeholder="e.g. 5 drums, 1 tote, bulk"></div>
+          <div class="form-group"><label for="rfq-notes">Additional Notes</label><textarea id="rfq-notes" name="notes"
+              placeholder="Spec requirements, timeline, application details..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Request for
+            Quote</button>
           <p class="form-note">No supplier names are shared. All inquiries are handled confidentially.</p>
         </form>
       </div>
@@ -248,7 +309,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span style="font-size:20px;font-weight:700;color:var(--white);">Sarren Chemicals</span>
-          <p>Buying and selling surplus, aged, and off-spec chemicals since 1997. Confidential. Reliable. Experienced.</p>
+          <p>Buying and selling surplus, aged, and off-spec chemicals since 1997. Confidential. Reliable. Experienced.
+          </p>
         </div>
         <div class="footer-col">
           <h4>Pages</h4>
@@ -286,4 +348,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
