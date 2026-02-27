@@ -112,7 +112,7 @@ export default function MolecularCanvas() {
       })
 
       drawHelix(ctx!, canvas!.width, canvas!.height, offset)
-      offset += 0.5
+      offset += 0.2
       animId = requestAnimationFrame(draw)
     }
 
