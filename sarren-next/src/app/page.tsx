@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import SplineHero from '@/components/SplineHero'
 
 export const metadata: Metadata = {
   title: 'Sarren Chemicals — Industrial Chemical Distribution',
@@ -63,10 +64,8 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative bg-navy text-white py-[120px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.18]"
-          style={{ backgroundImage: "url('/images/hero-industrial.jpg')" }}
-        />
+        <SplineHero />
+        <div className="absolute inset-0 bg-navy/65" />
         <div className="container-content relative z-10">
           <div className="max-w-[680px]">
             <p className="label text-white/50 mb-4">Chemical Distribution Since 1997</p>
