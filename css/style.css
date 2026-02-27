@@ -7,11 +7,17 @@
 
 :root {
   --navy:     #1B3A6B;
+  --navy-dark: #152f59;
   --offwhite: #F5F6F7;
   --steel:    #8A9BAE;
   --charcoal: #1C2530;
   --white:    #FFFFFF;
   --border:   #D8DDE3;
+  --white-hi:   rgba(255,255,255,0.8);
+  --white-mid:  rgba(255,255,255,0.7);
+  --white-low:  rgba(255,255,255,0.5);
+  --white-dim:  rgba(255,255,255,0.4);
+  --white-line: rgba(255,255,255,0.1);
   --font:     -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --max-w:    1200px;
   --section:  96px;
@@ -97,8 +103,8 @@ section {
   border-color: var(--navy);
 }
 .btn-primary:hover {
-  background: #152f59;
-  border-color: #152f59;
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
   text-decoration: none;
 }
 
@@ -199,6 +205,7 @@ section {
     padding: 24px 32px;
     gap: 20px;
     align-items: flex-start;
+    z-index: 99;
   }
   .nav-links.open { display: flex; }
   .nav-cta { width: 100%; }
@@ -220,7 +227,7 @@ section {
 }
 
 .footer-brand p {
-  color: rgba(255,255,255,0.7);
+  color: var(--white-mid);
   font-size: 15px;
   margin-top: 16px;
   max-width: 280px;
@@ -231,26 +238,26 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.5);
+  color: var(--white-low);
   margin-bottom: 16px;
 }
 
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 10px; }
 .footer-col a {
-  color: rgba(255,255,255,0.8);
+  color: var(--white-hi);
   font-size: 15px;
 }
 .footer-col a:hover { color: var(--white); text-decoration: none; }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--white-line);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
-  color: rgba(255,255,255,0.4);
+  color: var(--white-dim);
 }
 
 @media (max-width: 900px) {
