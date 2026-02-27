@@ -13,6 +13,7 @@
   --charcoal: #1C2530;
   --white:    #FFFFFF;
   --border:   #D8DDE3;
+  --white-xhi:  rgba(255,255,255,0.85);
   --white-hi:   rgba(255,255,255,0.8);
   --white-mid:  rgba(255,255,255,0.7);
   --white-low:  rgba(255,255,255,0.5);
@@ -294,7 +295,7 @@ section {
 }
 .hero-content { position: relative; z-index: 1; max-width: 680px; }
 .hero h1 { color: var(--white); margin-bottom: 24px; }
-.hero p  { color: rgba(255,255,255,0.85); font-size: 19px; margin-bottom: 40px; max-width: 60ch; }
+.hero p  { color: var(--white-xhi); font-size: 19px; margin-bottom: 40px; max-width: 60ch; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* --- Page Hero (interior pages) --- */
