@@ -4,7 +4,7 @@ import { sessionOptions, type SessionData } from '@/lib/session'
 
 const PUBLIC_ADMIN_PATHS = new Set(['/admin', '/api/admin/login', '/api/admin/logout'])
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (PUBLIC_ADMIN_PATHS.has(pathname)) {
