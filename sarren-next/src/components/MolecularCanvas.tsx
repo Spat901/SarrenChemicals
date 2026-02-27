@@ -90,16 +90,7 @@ export default function MolecularCanvas() {
 
     let animId: number
     let offset = 0
-
-    const hexagons: Hexagon[] = Array.from({ length: 8 }, () => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      radius: 20 + Math.random() * 30,
-      rot: Math.random() * Math.PI * 2,
-      rotSpeed: (Math.random() - 0.5) * 0.005,
-      driftX: (Math.random() - 0.5) * 0.3,
-      driftY: (Math.random() - 0.5) * 0.3,
-    }))
+    let hexagons: Hexagon[] = []
 
     function resize() {
       canvas!.width = canvas!.offsetWidth
@@ -126,6 +117,17 @@ export default function MolecularCanvas() {
     }
 
     resize()
+
+    hexagons = Array.from({ length: 8 }, () => ({
+      x: Math.random() * canvas!.width,
+      y: Math.random() * canvas!.height,
+      radius: 20 + Math.random() * 30,
+      rot: Math.random() * Math.PI * 2,
+      rotSpeed: (Math.random() - 0.5) * 0.005,
+      driftX: (Math.random() - 0.5) * 0.3,
+      driftY: (Math.random() - 0.5) * 0.3,
+    }))
+
     window.addEventListener('resize', resize)
     draw()
 
