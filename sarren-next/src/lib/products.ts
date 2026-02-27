@@ -24,7 +24,7 @@ export function addCategoryToCatalog(
   catalog: ProductCatalog,
   title: string
 ): ProductCatalog {
-  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
   return {
     categories: [...catalog.categories, { id, title, products: [] }],
   }
@@ -92,6 +92,10 @@ export function deleteProductFromCatalog(
   }
 }
 
+/**
+ * Returns true if the category has no products.
+ * Also returns true if the categoryId does not exist — callers should validate the ID first.
+ */
 export function isCategoryEmpty(catalog: ProductCatalog, categoryId: string): boolean {
   const cat = catalog.categories.find((c) => c.id === categoryId)
   return cat ? cat.products.length === 0 : true

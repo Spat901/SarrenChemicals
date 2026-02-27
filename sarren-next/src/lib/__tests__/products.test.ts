@@ -47,6 +47,11 @@ describe('addCategoryToCatalog', () => {
     addCategoryToCatalog(emptyCatalog, 'New Cat')
     expect(emptyCatalog.categories).toHaveLength(0)
   })
+
+  it('trims leading and trailing hyphens from id', () => {
+    const result = addCategoryToCatalog(emptyCatalog, '(Special Category!)')
+    expect(result.categories[0].id).not.toMatch(/^-|-$/)
+  })
 })
 
 describe('updateCategoryInCatalog', () => {

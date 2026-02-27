@@ -1,10 +1,10 @@
-import type { IronSessionOptions } from 'iron-session'
+import type { SessionOptions } from 'iron-session'
 
 export interface SessionData {
   isLoggedIn: boolean
 }
 
-export const sessionOptions: IronSessionOptions = {
+export const sessionOptions: SessionOptions = {
   password: process.env.SESSION_SECRET!,
   cookieName: 'sarren-admin',
   cookieOptions: {
