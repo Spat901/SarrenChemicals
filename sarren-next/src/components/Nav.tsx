@@ -21,7 +21,7 @@ export default function Nav() {
     <nav className="sticky top-0 z-[100] bg-white border-b border-border">
       <div className="max-w-content mx-auto px-8 h-[72px] flex items-center justify-between">
         <Link href="/" className="hover:no-underline">
-          <img src="/images/logo.png" alt="Sarren Chemicals" className="h-10 w-auto block" />
+          <img src="/images/logo.png" alt="Sarren Chemicals" className="h-16 w-auto block" />
         </Link>
 
         {/* Mobile toggle */}
