@@ -52,7 +52,7 @@ function drawHelix(ctx: CanvasRenderingContext2D, w: number, h: number, offset: 
   ctx.lineWidth = 1.5
   for (let y = -wl; y < h + wl; y += 2) {
     const x = cx + Math.sin(((y + offset) / wl) * Math.PI * 2) * amp
-    y === -wl ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+    if (y === -wl) ctx.moveTo(x, y); else ctx.lineTo(x, y)
   }
   ctx.stroke()
 
@@ -62,7 +62,7 @@ function drawHelix(ctx: CanvasRenderingContext2D, w: number, h: number, offset: 
   ctx.lineWidth = 1.5
   for (let y = -wl; y < h + wl; y += 2) {
     const x = cx + Math.sin(((y + offset) / wl) * Math.PI * 2 + Math.PI) * amp
-    y === -wl ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+    if (y === -wl) ctx.moveTo(x, y); else ctx.lineTo(x, y)
   }
   ctx.stroke()
 
