@@ -2,8 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getIronSession } from 'iron-session'
 import { sessionOptions, type SessionData } from '@/lib/session'
 
-const PUBLIC_ADMIN_PATHS = new Set(['/admin', '/api/admin/login', '/api/admin/logout'])
+// /api/admin/login and /api/admin/logout are matched by the config but must pass through unauthenticated
+const PUBLIC_ADMIN_PATHS = new Set(['/api/admin/login', '/api/admin/logout'])
 
+// Next.js 16: this function MUST be named `proxy` — the framework resolves it by name.
+// Do not rename or replace with a default export.
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
