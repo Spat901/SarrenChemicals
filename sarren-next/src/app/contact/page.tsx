@@ -44,7 +44,7 @@ export default function ContactPage() {
                 </div>
                 <div className="card">
                   <p className="label mb-2">Phone</p>
-                  <a href="tel:+1-XXX-XXX-XXXX" className="text-[17px] font-medium hover:no-underline">(XXX) XXX-XXXX</a>
+                  <a href="tel:+1-716-982-7394" className="text-[17px] font-medium hover:no-underline">(XXX) XXX-XXXX</a>
                 </div>
                 <div className="card">
                   <p className="label mb-3">Resources</p>

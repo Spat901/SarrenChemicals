@@ -78,6 +78,12 @@ export default function Footer() {
           <span>&copy; {new Date().getFullYear()} Sarren Chemicals. All rights reserved.</span>
           <span>No supplier names are displayed on this site.</span>
         </div>
+        <div className="mt-4 text-center text-[12px] text-white/25">
+          Website designed by{' '}
+          <a href="https://www.cordatallc.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white/60 hover:no-underline transition-colors">
+            CorData LLC
+          </a>
+        </div>
       </div>
     </footer>
   )
