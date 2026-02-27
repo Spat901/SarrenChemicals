@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import SplineHero from '@/components/SplineHero'
+import MolecularCanvas from '@/components/MolecularCanvas'
 
 export const metadata: Metadata = {
   title: 'Sarren Chemicals — Industrial Chemical Distribution',
@@ -64,8 +64,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative bg-navy text-white py-[120px] overflow-hidden">
-        <SplineHero />
-        <div className="absolute inset-0 bg-navy/65" />
+        <MolecularCanvas />
         <div className="container-content relative z-10">
           <div className="max-w-[680px]">
             <p className="label text-white/50 mb-4">Chemical Distribution Since 1997</p>
