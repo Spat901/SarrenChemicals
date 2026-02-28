@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 type FormType = 'rfq' | 'surplus' | 'contact'
 
@@ -27,18 +27,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT ?? 587),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    })
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
-    await transporter.sendMail({
-      from: `"Sarren Chemicals Website" <${process.env.SMTP_USER}>`,
+    await resend.emails.send({
+      from: 'Sarren Chemicals Website <noreply@sarrenchemicals.com>',
       to: process.env.CONTACT_EMAIL ?? 'info@sarrenchemicals.com',
       replyTo: data.email,
       subject: buildSubject(type, data),
