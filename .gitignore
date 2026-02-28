@@ -6,3 +6,4 @@ node_modules/
 .next/
 sarren-next/.next/
 sarren-next/node_modules/
+.vercel
