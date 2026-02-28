@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getPdfCatalog } from '@/lib/pdfs'
 
 const pages = [
   { href: '/', label: 'Home' },
@@ -9,13 +10,8 @@ const pages = [
   { href: '/contact', label: 'Contact' },
 ]
 
-const pdfs = [
-  { href: '/pdfs/sarren-line-card.pdf', label: 'Line Card (PDF)' },
-  { href: '/pdfs/sarren-capability-statement.pdf', label: 'Capability Statement (PDF)' },
-  { href: '/pdfs/sarren-sample-coa.pdf', label: 'Sample COA (PDF)' },
-]
-
-export default function Footer() {
+export default async function Footer() {
+  const pdfCatalog = await getPdfCatalog()
   return (
     <footer className="bg-navy text-white pt-16 pb-8">
       <div className="max-w-content mx-auto px-8">
@@ -46,13 +42,16 @@ export default function Footer() {
           <div>
             <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white/50 mb-4">Resources</h4>
             <ul className="list-none flex flex-col gap-[10px]">
-              {pdfs.map(({ href, label }) => (
-                <li key={href}>
-                  <a href={href} target="_blank" rel="noopener noreferrer" className="text-white/80 text-[15px] hover:text-white hover:no-underline transition-colors">
-                    {label}
+              {pdfCatalog.documents.map(({ id, name, url }) => (
+                <li key={id}>
+                  <a href={url} target="_blank" rel="noopener noreferrer" className="text-white/80 text-[15px] hover:text-white hover:no-underline transition-colors">
+                    {name}
                   </a>
                 </li>
               ))}
+              {pdfCatalog.documents.length === 0 && (
+                <li className="text-white/40 text-[15px]">No documents available</li>
+              )}
             </ul>
           </div>
 
