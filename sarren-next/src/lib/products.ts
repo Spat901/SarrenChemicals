@@ -1,4 +1,4 @@
-import { kv } from '@vercel/kv'
+import { kv } from './kv'
 import { v4 as uuidv4 } from 'uuid'
 
 export interface Product {

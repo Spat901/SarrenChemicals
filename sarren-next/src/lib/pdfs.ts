@@ -1,4 +1,4 @@
-import { kv } from '@vercel/kv'
+import { kv } from './kv'
 import { del } from '@vercel/blob'
 
 export interface PdfDocument {
